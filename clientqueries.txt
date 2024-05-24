@@ -1,0 +1,52 @@
+query getAllUsers{
+  users{
+    id
+    firstName
+    lastName
+    email
+  }
+}
+
+query getuserById{
+  user(id:"2"){
+    id
+    firstName
+    lastName
+    email
+    quotes{
+      name
+      by
+    }
+  }
+}
+
+query getQuotes{
+  quotes{
+    id
+    name
+  }
+}
+
+
+
+
+to get user and quotes by id
+// type Query {
+//   // users: [User]
+//   // user(id: ID!): User
+//   // quotes: [Quote]/
+//  
+// }
+
+// type User {
+//   id: ID!
+//   firstName: String
+//   lastName: String
+//   email: String
+//   quotes: [Quote]
+// }
+
+// type Quote {
+//   by: ID
+//   name: String
+// }
