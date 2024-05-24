@@ -1,0 +1,29 @@
+In GraphQL, the type definition describes the shape of your data.
+We'll define a simple Greeting type and a Query type to handle the greet query.
+
+In GraphQL, typeDefs stands for Type Definitions. It's a crucial part of the GraphQL schema where you define the shape of your data, including object types, queries, mutations, and subscriptions.
+
+Greeting: This type represents a greeting message.
+message: Field of type String that holds the greeting message.
+Query: This type represents the root query.
+greet: Field of type Greeting that takes a name argument and returns a Greeting.
+
+Resolver Functions
+Resolver functions are responsible for fetching the data for a particular field.
+
+npm install graphql
+npm install apollo-server
+npm install apollo-server-core
+
+apollo-server and apollo-server-core are both packages provided by Apollo GraphQL for creating GraphQL servers, but they serve slightly different purposes.
+
+apollo-server
+apollo-server is a complete package that includes everything you need to set up a GraphQL server, including a web server and integration with various Node.js frameworks (such as Express).
+
+apollo-server-core
+apollo-server-core is a lower-level package that provides the core functionality for creating GraphQL servers without including an integrated web server. It's useful if you want more control over how your GraphQL server integrates with your existing Node.js application, or if you want to use a different web server other than the ones supported by apollo-server.
+
+// schema means  like a class whose have name and type string like passining properties
+
+resolvers // greet: () => "Hello world",
+query  // greet: String
